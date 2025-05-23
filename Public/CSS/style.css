@@ -1,0 +1,810 @@
+:root {
+    --background-colorButton: #f6f2f2;
+    --background-colorBody: #000;
+    --textebuttonWathsapp: #fff;
+    --textebuttonWathsapp1: #000000;
+    --buttonhover: rgba(29, 170, 97, 0.6);
+    --Titreprincipale : #ffff;
+    --Bandrole: grey; 
+    --SousTitre :white;
+    --contourlettre:rgb(120, 120, 120);
+    --contourlettreBTN:rgb(79, 168, 61);
+    --background-colorcards:rgb(62, 61, 61) ;
+    --letters: 35; 
+    --card-width: 250px;
+    --card-height: 350px;
+    --card-gap: 16px;
+    --paragraphe:rgb(237, 231, 231);
+    --fèche:white;
+    --bordertemoignages-section:#ccc;
+    --bordertemoignages-form:#aaa;
+    --temoignages-formbutton: black;
+    --temoignages-formbuttonColor : white;
+    --colorTexteTémoignage : #a29f9f;
+    --temoignages-sectionbackground: rgb(57, 57, 57);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-colorBody);
+    font-family: "Montserrat", sans-serif;
+}
+
+/* Conteneur principal avec image */
+.button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    width: Auto;
+    padding: 15px;
+    background-image: url('../image/IMG_2803.jpeg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.text-wipe {
+    font-size: 3rem;
+    text-align: center;
+    color: var(--SousTitre);
+    font-weight: 700;
+    text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    flex-wrap:wrap ;
+    border-right: 2px solid white;
+    animation: typewriterCycle 14s steps(var(--letters), end) infinite;
+  
+    /* Contour doré */
+    -webkit-text-stroke: 0.1px var(--contourlettre);
+    text-shadow: 0 0 2px var(--contourlettre), 0 0 5px var(--contourlettre);
+  }
+  
+  /* Animation typewriter dynamique */
+  @keyframes typewriterCycle {
+    0% {
+      max-width: 0;
+    }
+    28.57% {
+      max-width: 100%;
+    }
+    71.42% {
+      max-width: 100%;
+    }
+    100% {
+      max-width: 0;
+    }
+  }
+  @media (max-width: 768px) {
+    .text-wipe {
+      font-size: 1.5rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+  @media (max-width: 480px) {
+    .text-wipe {
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+  @media (max-width: 320px) {
+    .text-wipe {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+  
+/* Bouton centré en bas */
+.click-me {
+    position: absolute;
+    bottom: 45px; 
+    left: 50%;
+    transform: translateX(-50%);
+    height: 45px;
+    width: 90%;
+    max-width: 300px;
+    border: 1px solid var(--textebuttonWathsapp);
+    border-radius: 2px;
+    box-shadow: 2px 4px 6px rgba(255, 255, 255);
+    background-color: var(--background-colorButton);
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--textebuttonWathsapp1);
+    text-align: center;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-text-stroke: 0.1px var(--contourlettreBTN);
+    text-shadow: 0 0 2px var(--contourlettreBTN), 0 0 5px var(--contourlettreBTN);
+}
+
+.click-me:hover {
+    box-shadow: 4px 8px 12px rgba(255, 255, 255, 0.95);
+    color: var(--buttonhover);
+}
+
+/* Responsive Tablette */
+@media (max-width: 768px) {
+    .button {
+        height: 60vh;
+        padding: 10px;
+    }
+
+    .click-me {
+        height: 42px;
+        font-size: 13px;
+    }
+}
+
+/* Responsive Téléphone 480px */
+@media (max-width: 480px) {
+    .button {
+        height: 50vh;
+        padding: 10px;
+    }
+
+    .click-me {
+        width: 90%;
+        height: 40px;
+        font-size: 12px;
+        bottom: 15px;
+    }
+}
+
+/*écrans comme 320px */
+@media (max-width: 360px) {
+    .button {
+        height: 45vh;
+        padding: 8px;
+    }
+
+    .click-me {
+        width: 95%;
+        font-size: 11px;
+        height: 38px;
+        bottom: 12px;
+    }
+}
+
+/*titreMarkeing*/
+.TitreMarketing{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    width: Auto;
+    padding: 15px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.GrosText{
+    font-size: 80px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--Titreprincipale);
+    text-align:center;
+    transition: all 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.GrosText1{
+    font-size: 50px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--Titreprincipale);
+    text-align:center;
+    transition: all 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.GrosText2{
+    font-size: 40px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--Titreprincipale);
+    text-align:center;
+    transition: all 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.GrosText3{
+    font-size: 40px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--Titreprincipale);
+    text-align:center;
+    transition: all 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Responsive Téléphone 480px */
+@media (max-width: 480px) {
+    .TitreMarketing {
+        height: 30vh;
+        padding: 10px;
+    }
+
+    .GrosText{
+        width: 90%;
+        height: 40px;
+        font-size: 20px;
+        bottom: 3px;
+    }
+}
+
+/* écrans comme 320px */
+@media (max-width: 360px) {
+    .TitreMarketing {
+        height: 15vh;
+        padding: 8px;
+    }
+
+    .GrosText {
+        width: 95%;
+        font-size: 15px;
+        height: 38px;
+        bottom: 3px;
+    }
+}
+/*button chefs d'oeuvres*/
+.button1{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+    width: Auto;
+    padding: 20px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.click-me1{
+    position: absolute;
+    bottom: 45px; 
+    left: 50%;
+    transform: translateX(-50%);
+    height: 65px;
+    width: 600px;
+    /*max-width: 300px;*/
+    border: 1px solid var(--textebuttonWathsapp);
+    border-radius: 10px;
+    box-shadow: 2px 4px 6px rgba(255, 255, 255);
+    background-color: var(--background-colorButton);
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--textebuttonWathsapp1);
+    text-align: center;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.click-me1:hover {
+    box-shadow: 4px 8px 12px rgba(255, 255, 255, 0.95);
+    color: var(--buttonhover);
+}
+/* Responsive Tablette */
+@media (max-width: 768px) {
+    .button1 {
+        height: 60vh;
+        padding: 10px;
+    }
+
+    .click-me1 {
+        height: 42px;
+        font-size: 13px;
+    }
+}
+
+/* Responsive Téléphone 480px */
+@media (max-width: 480px) {
+    .button1 {
+        height: 10vh;
+        padding: 10px;
+    }
+
+    .click-me1 {
+        width: 90%;
+        height: 40px;
+        font-size: 12px;
+        bottom: 15px;
+    }
+}
+
+/*écrans comme 320px */
+@media (max-width: 360px) {
+    .button1 {
+        height: 10vh;
+        padding: 8px;
+    }
+
+    .click-me1 {
+        width: 95%;
+        font-size: 11px;
+        height: 38px;
+        bottom: 12px;
+    }
+}
+.bandrole {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 8vh;
+    width: 100%;
+    padding: 15px;
+    overflow: hidden; /* Masque le texte qui sort */
+    background-size: cover;
+    background-position: center;
+    border-radius: 0.5px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background-color: var(--Bandrole);
+  }
+  
+  /* Texte défilant */
+  .bandrole {
+    width: 100%;
+    height: 8vh;
+    overflow: hidden;
+    background-color: var(--Bandrole);
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 10px;
+  }
+  
+  .scrolling-text {
+    display: flex;
+    white-space: nowrap;
+    animation: scrollLoop 12s linear infinite;
+  }
+  
+  .scrolling-text span {
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--SousTitre);
+  }
+  
+  /* Animation fluide */
+  @keyframes scrollLoop {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  /* Responsive tablette */
+  @media (max-width: 768px) {
+    .scrolling-text span {
+      font-size: 2rem;
+    }
+  }
+  
+  /* Mobile 480px */
+  @media (max-width: 480px) {
+    .scrolling-text span {
+      font-size: 1.5rem;
+    }
+  }
+  
+  /* Mobile 320px */
+  @media (max-width: 360px) {
+    .scrolling-text span {
+      font-size: 1.2rem;
+    }
+  }
+  
+/*cards qui défils*/
+  .slider {
+    overflow: hidden;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px 0;
+  }
+  
+  .slide-track {
+    display: flex;
+    gap: var(--card-gap);
+    width: calc((var(--card-width) + var(--card-gap)) * 10);
+    animation: scrollLoop 30s linear infinite;
+  }
+  
+  .card {
+    flex: 0 0 auto;
+    width: var(--card-width);
+    height: var(--card-height);
+    background: linear-gradient(145deg, #7c7a73, #fff8dc);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+  
+  /* Animation */
+  @keyframes scrollLoop {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-50% - var(--card-gap) * 2.5));
+    }
+  }
+  
+  @media (max-width: 768px) {
+    :root {
+      --card-width: 180px;
+      --card-height: 260px;
+      --card-gap: 12px;
+    }
+  }
+  @media (max-width: 480px) {
+    :root {
+      --card-width: 140px;
+      --card-height: 200px;
+      --card-gap: 10px;
+    }
+  }
+  
+  @media (max-width: 360px) {
+    :root {
+      --card-width: 120px;
+      --card-height: 180px;
+      --card-gap: 8px;
+    }
+  }
+  /*contact & infos */
+/* Style commun aux deux sections */
+.infos-section,
+.contact-container {
+  background-color: var(--background-colorcards);
+  color: var(--paragraphe);
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+  box-sizing: border-box;
+}
+
+/* Titre pour infos-section */
+.infos-title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--Titreprincipale);
+  text-align: center;
+  margin-bottom: 30px;
+  -webkit-text-stroke: 0.3px var(--contourlettre);
+  text-shadow: 0 0 3px var(--contourlettre);
+}
+
+/* Liste de la section infos */
+.infos-list {
+  list-style: none;
+  padding: 0;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.infos-list li {
+  margin-bottom: 15px;
+}
+
+/* Titre contact */
+.contact-container .GrosText3 {
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--Titreprincipale);
+  text-align: center;
+  margin-bottom: 30px;
+  -webkit-text-stroke: 0.3px var(--contourlettre);
+  text-shadow: 0 0 3px var(--contourlettre);
+}
+
+/* Contenu de la section contact */
+.contact-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.contact-info,
+.hours-info {
+  flex: 1;
+  min-width: 250px;
+  font-size: 1.1rem;
+}
+
+.hours-info ul {
+  padding-left: 20px;
+}
+
+@media (max-width: 768px) {
+  .infos-title,
+  .contact-container .GrosText3 {
+    font-size: 1.5rem;
+  }
+
+  .infos-list,
+  .contact-info,
+  .hours-info {
+    font-size: 1rem;
+  }
+
+  .contact-content {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .infos-section,
+  .contact-container {
+    padding: 30px 15px;
+  }
+
+  .infos-title,
+  .contact-container .GrosText3 {
+    font-size: 1.3rem;
+  }
+}
+/* flèche vers le haut*/
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: transparent; /* fond transparent */
+    color: white;
+    font-size: 24px;
+    padding: 10px 15px;
+    border-radius: 50%;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    display: none;
+    transition: all 0.3s ease;
+    z-index: 999;
+    border: 2px solid transparent; /* optionnel : pour délimiter le bouton */
+  }
+  
+  .scroll-to-top:hover {
+    background-color: rgba(255, 255, 255, 0.025); /* léger effet au survol */
+  }
+  /*témoigange*/
+  .GrosText5 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem); /* Ajuste la taille selon la taille de l’écran */
+    font-weight: 300;
+    text-transform: uppercase;
+    color: var(--Titreprincipale);
+    text-align: center;
+    padding: 1rem;
+    line-height: 1.4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+/*.temoignages-section {
+    padding: 2rem;
+    background: transparent;
+    border: 1px solid var(--bordertemoignages-section);
+    border-radius: 1rem;
+    max-width: 600px;
+    margin: auto;
+    padding: 2rem;
+    background-color: transparent;
+    color: var(  --colorTexteTémoignage); 
+  }*/
+  .temoignages-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    align-items: stretch; /* aligne les sections à la même hauteur */
+  }
+  /********************************/
+  /* Conteneur principal */
+.temoignages-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+  
+  /* Section de témoignage */
+  .temoignages-section {
+    flex: 1 1 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    border: 1px solid var(--bordertemoignages-section);
+    border-radius: 1rem;
+    background-color: transparent;
+    color: var(--colorTexteTémoignage);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  /* Image responsive */
+  .temoignagephoto {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    object-fit: cover;
+  }
+  
+  /* Texte responsive */
+  .temoignages-title {
+    font-size: 1.2rem;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+  
+  /* Formulaire responsive */
+  .temoignages-form input,
+  .temoignages-form textarea,
+  .temoignages-form button {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    box-sizing: border-box;
+  }
+  
+
+  @media (min-width: 768px) {
+    .temoignages-section {
+      flex: 1 1 45%;
+      max-width: 45%;
+    }
+  }
+  
+  /***********/
+  /*.temoignages-section {
+    flex: 1 1 45%;
+    max-width: 600px;
+    min-height: 100%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem;
+    background: transparent;
+    border: 1px solid var(--bordertemoignages-section);
+    border-radius: 1rem;
+    background-color: transparent;
+    color: var(--colorTexteTémoignage);
+  }
+
+@media (max-width: 600px) {
+    .temoignages-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .temoignages-section {
+      flex: 1 1 100%;
+      width: 100%;
+    }
+  }
+  
+  .temoignages-form input,
+  .temoignages-form textarea,
+  .temoignages-form button {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    box-sizing: border-box;
+  }*/
+  
+  /**********************************/
+  .temoignages-list {
+    margin-top: 1rem;
+    padding-left: 0;
+    list-style: none;
+  }
+  
+  .temoignages-list li {
+    background-color: var(--temoignages-sectionbackground); /* fond léger */
+    color:var(  --colorTexteTémoignage); /* texte noir */
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  .temoignages-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .temoignages-form input,
+  .temoignages-form textarea {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid var( --bordertemoignages-form);
+  }
+  
+  .temoignages-form button {
+    padding: 0.7rem;
+    border: none;
+    background-color:var(  --temoignages-formbutton);
+    color: var(  --temoignages-formbuttonColor );
+    border-radius: 0.5rem;
+    cursor: pointer;
+  }
+  h2{
+    color: var(   --temoignages-formbuttonColor );
+  }
+  h3{
+    color: var(   --temoignages-formbuttonColor );
+  }
+  .temoignagephoto{
+    height: auto;
+    width: auto;
+    flex: 0 0 auto;
+    width: var(--card-width);
+    height: var(--card-height);
+    background: linear-gradient(145deg, #7c7a73, #fff8dc);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+  .temoignages-title1 {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    text-align: center;
+    color: var(--colorTexteTémoignage);
+    margin-bottom: 2rem;
+  }
+  
+    
+  
+  
